@@ -1,7 +1,7 @@
 import { Check, Mail, Phone } from "lucide-react";
 import Image from "next/image";
+import Logo from "@/public/logo.png"
 import Link from "next/link";
-
 const phoneDisplay = "(516) 250-6544";
 const phoneHref = "tel:+15162506544";
 const email = "Dgiammalva1@outlook.com";
@@ -64,20 +64,27 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,13,18,0.72)_0%,rgba(7,13,18,0.56)_48%,rgba(7,13,18,0.44)_100%)] sm:bg-[linear-gradient(90deg,rgba(7,13,18,0.88)_0%,rgba(7,13,18,0.66)_38%,rgba(7,13,18,0.2)_72%,rgba(7,13,18,0.08)_100%)]" />
 
         <div className="relative z-10 mx-auto flex min-h-[92vh] w-full max-w-7xl flex-col justify-between px-6 py-6 sm:px-8 lg:px-10">
-          <header className="flex items-center justify-between gap-4">
+          <header className="flex items-center justify-between  h-24 mt-4">
             <a
               className="text-base font-bold tracking-[0.14em] text-white"
               href="#"
             >
-              Veloce Direct
+              <Image
+                src={Logo}
+                alt="Freshly painted room with protected floors and painting supplies"
+
+                priority
+              width={170}
+              
+              />
             </a>
             <nav className="flex items-center gap-2">
-              {/* <Link
+              <Link
                 className="rounded-full border border-white/35 bg-white/10 px-4 py-3 text-sm font-bold text-white backdrop-blur transition hover:bg-white/18"
                 href="/work"
               >
                 Our Work
-              </Link> */}
+              </Link>
               {/* <a
                 className="rounded-full bg-[#2d6a4f] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-black/20 transition hover:bg-[#24563f]"
                 href={phoneHref}
@@ -172,7 +179,6 @@ export default function Home() {
               <p className="max-w-42 text-right text-sm font-semibold leading-5 text-[#56616a]">
                 Standard rooms up to 14x14 with 8ft ceiling
               </p>
-              
             </div>
           </div>
 
