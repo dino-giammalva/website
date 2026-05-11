@@ -14,9 +14,15 @@ const included = [
 ];
 
 const details = [
-  { label: "Price", value: "$350 flat rate for labor" },
-  { label: "Room size", value: "Valid for standard rooms up to 14x14 with 8ft Ceilings" },
-  { label: "Scope", value: "Walls only, paint and materials not included" },
+  {
+    label: "Price",
+    value: "$350 flat rate for labor to paint walls only. Paint not included.",
+  },
+  {
+    label: "Room size",
+    value: "Valid for standard rooms up to 14x14 with 8ft Ceilings",
+  },
+  // { label: "Scope", value: "Walls only, paint and materials not included" },
 ];
 
 const businessJsonLd = {
@@ -72,25 +78,18 @@ export default function Home() {
               <Image
                 src={Logo}
                 alt="Freshly painted room with protected floors and painting supplies"
-
                 priority
-              width={170}
-              
+                width={170}
               />
             </a>
             <nav className="flex items-center gap-2">
-              <Link
+              {/* <Link
                 className="rounded-full border border-white/35 bg-white/10 px-4 py-3 text-sm font-bold text-white backdrop-blur transition hover:bg-white/18"
                 href="/work"
               >
                 Our Work
-              </Link>
-              {/* <a
-                className="rounded-full bg-[#2d6a4f] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-black/20 transition hover:bg-[#24563f]"
-                href={phoneHref}
-              >
-                Call
-              </a> */}
+              </Link> */}
+             
             </nav>
           </header>
 
@@ -102,9 +101,10 @@ export default function Home() {
               Refresh Your Space for Less!
             </h1>
             <p className="mt-7 max-w-2xl text-xl leading-8 text-white/88">
-              We specializes in Long Island home decor painting, helping
-              homeowners brighten favorite rooms with expert wall painting for
-              one simple labor rate.
+              Transform your Long Island home with expert interior painting. We
+              specialize in brightening your favorite spaces through
+              high-quality craftsmanship, all offered at a transparent,
+              flat-rate labor cost.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -123,7 +123,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid gap-3 pb-4 sm:grid-cols-3">
+          <div className="grid gap-8 pb-4 sm:grid-cols-2">
             {details.map((item) => (
               <div
                 className="rounded-3xl border border-white/18 bg-white/12 p-4 backdrop-blur-md"
@@ -150,15 +150,11 @@ export default function Home() {
             Long Island interior painting by Veloce Direct
           </p>
           <h2 className="mt-4 max-w-3xl text-4xl font-black leading-tight text-[#17212b] sm:text-5xl">
-            Nursery, home office, master bedroom, or the room you keep meaning
-            to finish.
+            Bedrooms, home officies, nurseries or the rooms you keep meaning to finish.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#56616a]">
             Veloce Direct helps refresh Long Island homes with clean,
-            professional room painting and home decor paint updates. For just
-            $350 labor only, we&apos;ll paint the walls so you can enjoy the
-            transformation without losing your weekend to prep, cleanup, and
-            second coats.
+            professional painting and home decor updates.
           </p>
         </div>
 
