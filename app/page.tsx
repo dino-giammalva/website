@@ -122,7 +122,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid gap-8 pb-4 sm:grid-cols-2">
+          {/* <div className="grid gap-8 pb-4 sm:grid-cols-2">
             {details.map((item) => (
               <div
                 className="rounded-3xl border border-white/18 bg-white/12 p-4 backdrop-blur-md"
@@ -136,7 +136,7 @@ export default function Home() {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -164,21 +164,21 @@ export default function Home() {
             <p className="text-sm font-black uppercase tracking-[0.18em] text-[#bd4f2d]">
               Limited time room special
             </p>
-            <div className="mt-4 flex items-end justify-between gap-4 border-b border-[#eadfce] pb-6">
+            <div className="mt-4 flex items-start justify-between gap-4 border-b border-[#eadfce] pb-6">
               <div>
-                <p className="text-3xl font-black leading-none text-[#17212b]">
-                  $350
+                <p className="text-lg font-black leading-none text-[#17212b]">
+                  We provide the expert labor for a flat $350; you just provide
+                  the paint!
                 </p>
-                <p className="mt-2 text-sm font-bold uppercase tracking-[0.12em] text-[#56616a]">
+                {/* <p className="mt-2 text-sm font-bold uppercase tracking-[0.12em] text-[#56616a]">
                   Labor only
-                </p>
+                </p> */}
               </div>
               <p className="max-w-42 text-right text-sm font-semibold leading-5 text-[#56616a]">
-                Standard rooms up to 14x14 with 8ft ceiling.
+                Standard rooms up to 14x14 with 8ft ceiling.*
               </p>
             </div>
           </div>
-
           <ul className="mt-2 divide-y divide-[#eadfce]">
             {included.map((item) => (
               <li
@@ -198,6 +198,9 @@ export default function Home() {
               </li>
             ))}
           </ul>
+          <p className=" text-left text-[12px] font-thin  text-[#56616a]">
+            * Rooms requiring primer will be an additional charge.
+          </p>
         </div>
       </section>
 
