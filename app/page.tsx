@@ -15,7 +15,7 @@ const included = [
 
 const details = [
   { label: "Price", value: "$350 flat rate for labor" },
-  { label: "Room size", value: "Valid for standard rooms up to 14x14" },
+  { label: "Room size", value: "Valid for standard rooms up to 14x14 with 8ft Ceilings" },
   { label: "Scope", value: "Walls only, paint and materials not included" },
 ];
 
@@ -169,9 +169,10 @@ export default function Home() {
                   Labor only
                 </p>
               </div>
-              <p className="max-w-36 text-right text-sm font-semibold leading-5 text-[#56616a]">
-                Standard rooms up to 14x14
+              <p className="max-w-42 text-right text-sm font-semibold leading-5 text-[#56616a]">
+                Standard rooms up to 14x14 with 8ft ceiling
               </p>
+              
             </div>
           </div>
 
