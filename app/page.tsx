@@ -149,7 +149,7 @@ export default function Home() {
             Long Island interior painting by Veloce Direct
           </p>
           <h2 className="mt-4 max-w-3xl text-4xl font-black leading-tight text-[#17212b] sm:text-5xl">
-            Bedrooms, home officies, nurseries or the rooms you keep meaning to
+            Bedrooms, home offices, nurseries or the rooms you keep meaning to
             finish.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#56616a]">
