@@ -65,16 +65,19 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto flex min-h-[92vh] w-full max-w-7xl flex-col justify-between px-6 py-6 sm:px-8 lg:px-10">
           <header className="flex items-center justify-between gap-4">
-            <a className="text-base font-bold tracking-[0.14em] text-white" href="#">
+            <a
+              className="text-base font-bold tracking-[0.14em] text-white"
+              href="#"
+            >
               Veloce Direct
             </a>
             <nav className="flex items-center gap-2">
-              <Link
+              {/* <Link
                 className="rounded-full border border-white/35 bg-white/10 px-4 py-3 text-sm font-bold text-white backdrop-blur transition hover:bg-white/18"
                 href="/work"
               >
                 Our Work
-              </Link>
+              </Link> */}
               <a
                 className="rounded-full bg-[#2d6a4f] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-black/20 transition hover:bg-[#24563f]"
                 href={phoneHref}
@@ -92,9 +95,9 @@ export default function Home() {
               Refresh Your Space for Less!
             </h1>
             <p className="mt-7 max-w-2xl text-xl leading-8 text-white/88">
-              Dino Giammalva specializes in Long Island home decor painting,
-              helping homeowners brighten favorite rooms with expert wall
-              painting for one simple labor rate.
+              We specializes in Long Island home decor painting, helping
+              homeowners brighten favorite rooms with expert wall painting for
+              one simple labor rate.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -137,7 +140,7 @@ export default function Home() {
       >
         <div>
           <p className="text-sm font-black uppercase tracking-[0.18em] text-[#2d6a4f]">
-            Long Island interior painting by Dino Giammalva
+            Long Island interior painting by Veloce Direct
           </p>
           <h2 className="mt-4 max-w-3xl text-4xl font-black leading-tight text-[#17212b] sm:text-5xl">
             Nursery, home office, master bedroom, or the room you keep meaning
@@ -179,7 +182,11 @@ export default function Home() {
                 key={item}
               >
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#2d6a4f] text-sm font-bold text-white">
-                  <Check aria-hidden="true" className="h-4 w-4" strokeWidth={3} />
+                  <Check
+                    aria-hidden="true"
+                    className="h-4 w-4"
+                    strokeWidth={3}
+                  />
                 </span>
                 <span className="text-base font-semibold leading-6 text-[#34404a]">
                   {item}
@@ -230,8 +237,8 @@ export default function Home() {
                 Ready for a room that feels fresh again?
               </h2>
               <p className="mt-4 max-w-2xl text-lg leading-8 text-[#56616a]">
-                Reach out to Dino to reserve your spot for the limited time room
-                special. Quality you can see. Prices you&apos;ll love.
+                Reach out to Veloce Direct to reserve your spot for the limited
+                time room special. Quality you can see. Prices you&apos;ll love.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:w-72 lg:flex-col">
@@ -239,15 +246,23 @@ export default function Home() {
                 className="inline-flex items-center justify-center gap-3 rounded-full bg-[#2d6a4f] px-7 py-4 text-center text-base font-extrabold text-white shadow-lg shadow-[#2d6a4f]/20 transition hover:bg-[#24563f]"
                 href={phoneHref}
               >
-                <Phone aria-hidden="true" className="h-5 w-5" strokeWidth={2.4} />
+                <Phone
+                  aria-hidden="true"
+                  className="h-5 w-5"
+                  strokeWidth={2.4}
+                />
                 {phoneDisplay}
               </a>
               <a
                 className="inline-flex items-center justify-center gap-3 rounded-full border border-[#dfd5c5] bg-[#fffaf1] px-7 py-4 text-center text-base font-extrabold text-[#17212b] transition hover:border-[#cfc1ae] hover:bg-[#f7f2e8]"
                 href={emailHref}
               >
-                <Mail aria-hidden="true" className="h-5 w-5" strokeWidth={2.4} />
-                Email Dino
+                <Mail
+                  aria-hidden="true"
+                  className="h-5 w-5"
+                  strokeWidth={2.4}
+                />
+                Email Us
               </a>
             </div>
           </div>
