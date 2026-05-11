@@ -54,7 +54,7 @@ export default function Home() {
       />
       <section className="relative isolate min-h-[92vh] overflow-hidden bg-[#101820] text-white">
         <Image
-          src="/room-painting-hero.png"
+          src="/room-painting-hero.jpg"
           alt="Freshly painted room with protected floors and painting supplies"
           fill
           priority

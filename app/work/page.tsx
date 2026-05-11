@@ -9,7 +9,7 @@ const emailHref = "mailto:Dgiammalva1@outlook.com";
 
 const workImages = [
   {
-    src: "/room-painting-hero.png",
+    src: "/room-painting-hero.jpg",
     alt: "Freshly painted Long Island room with protected floors",
     title: "Fresh Interior Room Refresh",
     location: "Long Island, NY",
