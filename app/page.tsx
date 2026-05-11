@@ -89,7 +89,6 @@ export default function Home() {
               >
                 Our Work
               </Link> */}
-             
             </nav>
           </header>
 
@@ -150,11 +149,13 @@ export default function Home() {
             Long Island interior painting by Veloce Direct
           </p>
           <h2 className="mt-4 max-w-3xl text-4xl font-black leading-tight text-[#17212b] sm:text-5xl">
-            Bedrooms, home officies, nurseries or the rooms you keep meaning to finish.
+            Bedrooms, home officies, nurseries or the rooms you keep meaning to
+            finish.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#56616a]">
-            Veloce Direct helps refresh Long Island homes with clean,
-            professional painting and home decor updates.
+            Skip the DIY stress. For a flat labor fee of $350, Veloce Direct
+            will give your room a fresh new look while you relax. From prep to
+            the final coat, we take care of the hard work so you don't have to.
           </p>
         </div>
 
