@@ -164,7 +164,7 @@ export default function Home() {
             <p className="text-sm font-black uppercase tracking-[0.18em] text-[#bd4f2d]">
               Limited time room special
             </p>
-            <div className="mt-4 flex items-start justify-between gap-4 border-b border-[#eadfce] pb-6">
+            <div className="mt-4 flex items-start flex-col justify-between gap-4 border-b border-[#eadfce] pb-6 md:flex-row">
               <div>
                 <p className="text-lg font-black leading-none text-[#17212b]">
                   We provide the expert labor for a flat $350; you just provide
@@ -174,7 +174,7 @@ export default function Home() {
                   Labor only
                 </p> */}
               </div>
-              <p className="max-w-42 text-right text-sm font-semibold leading-5 text-[#56616a]">
+              <p className="md:max-w-42 md:text-right text-sm font-semibold leading-5 text-[#56616a]">
                 Standard rooms up to 14x14 with 8ft ceiling.*
               </p>
             </div>
