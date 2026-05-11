@@ -8,7 +8,7 @@ const email = "Dgiammalva1@outlook.com";
 const emailHref = `mailto:${email}`;
 
 const included = [
-  "Two coats of premium finish on all walls.",
+  "Two coats of premium finish paint on all walls.",
   "Taping and floor protection handled before painting starts.",
   "Clean, efficient work with a spotless room when we leave.",
 ];
@@ -20,7 +20,7 @@ const details = [
   },
   {
     label: "Room size",
-    value: "Valid for standard rooms up to 14x14 with 8ft Ceilings",
+    value: "Valid for standard rooms up to 14x14 with 8ft Ceilings.",
   },
   // { label: "Scope", value: "Walls only, paint and materials not included" },
 ];
@@ -162,7 +162,7 @@ export default function Home() {
         <div className="rounded-3xl bg-white p-6 shadow-[0_20px_60px_rgba(31,36,40,0.12)] sm:p-7">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.18em] text-[#bd4f2d]">
-              What&apos;s included
+              Limited time room special
             </p>
             <div className="mt-4 flex items-end justify-between gap-4 border-b border-[#eadfce] pb-6">
               <div>
@@ -174,7 +174,7 @@ export default function Home() {
                 </p>
               </div>
               <p className="max-w-42 text-right text-sm font-semibold leading-5 text-[#56616a]">
-                Standard rooms up to 14x14 with 8ft ceiling
+                Standard rooms up to 14x14 with 8ft ceiling.
               </p>
             </div>
           </div>
