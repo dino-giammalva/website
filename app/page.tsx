@@ -106,7 +106,7 @@ export default function Home() {
             finish.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#56616a]">
-            Skip the DIY stress. For a flat labor fee of $350, Veloce Direct
+            Skip the DIY stress. Veloce Direct
             will give your room a fresh new look while you relax. From prep to
             the final coat, we take care of the hard work so you don&apos;t have to.
           </p>
