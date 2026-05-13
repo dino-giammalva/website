@@ -1,32 +1,53 @@
 import { Mail, Phone } from "lucide-react";
 import type { Metadata } from "next";
+import { readdirSync } from "node:fs";
+import path from "node:path";
+import InstagramWorkGrid from "@/components/InstagramWorkGrid";
 import WorkCard from "@/components/WorkCard";
 
 const phoneDisplay = "(516) 250-6544";
 const phoneHref = "tel:+15162506544";
 const emailHref = "mailto:Dgiammalva1@outlook.com";
 
-const workProjects = [
-  {
-    id: "fresh-interior-room-refresh",
-    title: "Fresh Interior Room Refresh",
-    location: "Long Island, NY",
-    images: [
-      {
-        src: "/logo.png",
-        alt: "Freshly painted Long Island room with protected floors",
-      },
-      {
-        src: "/room-painting-hero.jpg",
-        alt: "Finished Long Island interior painting project",
-      },
-      {
-        src: "/room-painting-hero.jpg",
-        alt: "Clean room refresh after professional wall painting",
-      },
-    ],
-  },
-];
+const projectFolders = ["Project1", "Project2", "Project3"];
+const imageExtensions = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif"]);
+const galleryLayout: "instagram" | "cards" = "instagram";
+
+function getProjectImages(folder: string) {
+  const folderPath = path.join(process.cwd(), "public", folder);
+
+  return readdirSync(folderPath)
+    .filter((fileName) =>
+      imageExtensions.has(path.extname(fileName).toLowerCase()),
+    )
+    .sort((firstFile, secondFile) => {
+      const firstNumber = Number.parseInt(firstFile, 10);
+      const secondNumber = Number.parseInt(secondFile, 10);
+
+      if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
+        return firstFile.localeCompare(secondFile);
+      }
+
+      return firstNumber - secondNumber;
+    })
+    .map((fileName) => ({
+      src: `/${folder}/${fileName}`,
+      alt: `Veloce Direct project ${folder.replace("Project", "")} photo`,
+    }));
+}
+
+const workProjects = projectFolders.map((folder, index) => ({
+  id: folder.toLowerCase(),
+  title: `Project ${index + 1}`,
+  location: "Long Island, NY",
+  images: getProjectImages(folder),
+}));
+const allWorkImages = workProjects.flatMap((project) =>
+  project.images.map((image, index) => ({
+    ...image,
+    alt: `${project.title} photo ${index + 1}`,
+  })),
+);
 
 export const metadata: Metadata = {
   title: "Painting Work Gallery | Veloce Direct Long Island",
@@ -50,22 +71,27 @@ export default function WorkPage() {
             decor paint updates by Veloce Direct.
           </p>
           <p className="mt-6 inline-flex rounded-full border border-[#dfd5c5] bg-white px-4 py-2 text-sm font-bold text-[#2d6a4f] shadow-sm">
-            {workProjects.length} project shown
+            {allWorkImages.length} photos shown
           </p>
         </div>
       </section>
 
       <section className="px-6 pb-16 sm:px-8 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
-          {workProjects.map((project) => (
-            <WorkCard
-              images={project.images}
-              key={project.id}
-              location={project.location}
-              title={project.title}
-            />
-          ))}
-        </div>
+        {galleryLayout === "instagram" ? (
+          <InstagramWorkGrid images={allWorkImages} />
+        ) : (
+          <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
+            {workProjects.map((project) => (
+              <WorkCard
+                images={project.images}
+                key={project.id}
+                location={project.location}
+                preloadFirstImage={project.id === workProjects[0]?.id}
+                title={project.title}
+              />
+            ))}
+          </div>
+        )}
       </section>
 
       <section className="px-6 pb-16 sm:px-8 lg:px-10">
