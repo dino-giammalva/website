@@ -1,7 +1,6 @@
 import { Check, Mail, Phone } from "lucide-react";
 import Image from "next/image";
-import Logo from "@/public/logo.png"
-import Link from "next/link";
+
 const phoneDisplay = "(516) 250-6544";
 const phoneHref = "tel:+15162506544";
 const email = "Dgiammalva1@outlook.com";
@@ -13,17 +12,6 @@ const included = [
   "Clean, efficient work with a spotless room when we leave.",
 ];
 
-const details = [
-  {
-    label: "Price",
-    value: "$350 flat rate for labor to paint walls only. Paint not included.",
-  },
-  {
-    label: "Room size",
-    value: "Valid for standard rooms up to 14x14 with 8ft Ceilings.",
-  },
-  // { label: "Scope", value: "Walls only, paint and materials not included" },
-];
 
 const businessJsonLd = {
   "@context": "https://schema.org",
@@ -69,30 +57,10 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,13,18,0.72)_0%,rgba(7,13,18,0.56)_48%,rgba(7,13,18,0.44)_100%)] sm:bg-[linear-gradient(90deg,rgba(7,13,18,0.88)_0%,rgba(7,13,18,0.66)_38%,rgba(7,13,18,0.2)_72%,rgba(7,13,18,0.08)_100%)]" />
 
-        <div className="relative z-10 mx-auto flex min-h-[92vh] w-full max-w-7xl flex-col justify-between px-6 py-6 sm:px-8 lg:px-10">
-          <header className="flex items-center justify-between  h-24 mt-4">
-            <a
-              className="text-base font-bold tracking-[0.14em] text-white"
-              href="#"
-            >
-              <Image
-                src={Logo}
-                alt="Freshly painted room with protected floors and painting supplies"
-                priority
-                width={170}
-              />
-            </a>
-            <nav className="flex items-center gap-2">
-              {/* <Link
-                className="rounded-full border border-white/35 bg-white/10 px-4 py-3 text-sm font-bold text-white backdrop-blur transition hover:bg-white/18"
-                href="/work"
-              >
-                Our Work
-              </Link> */}
-            </nav>
-          </header>
+        <div className="relative z-10 mx-auto flex min-h-[92vh] w-full max-w-7xl flex-col justify-between px-6 pb-6 pt-32 sm:px-8 sm:pt-32 lg:px-10">
+         
 
-          <div className="max-w-3xl py-20 sm:py-24">
+          <div className="max-w-3xl pb-20 mt-24 sm:pb-24 sm:pt-12">
             <p className="mb-5 inline-flex rounded-full border border-white/24 bg-white/14 px-4 py-2 text-sm font-semibold uppercase tracking-[0.16em] text-white backdrop-blur">
               Limited Time Room Special
             </p>
@@ -122,21 +90,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* <div className="grid gap-8 pb-4 sm:grid-cols-2">
-            {details.map((item) => (
-              <div
-                className="rounded-3xl border border-white/18 bg-white/12 p-4 backdrop-blur-md"
-                key={item.label}
-              >
-                <p className="text-sm font-bold uppercase tracking-[0.14em] text-white/72">
-                  {item.label}
-                </p>
-                <p className="mt-2 text-base font-semibold text-white">
-                  {item.value}
-                </p>
-              </div>
-            ))}
-          </div> */}
         </div>
       </section>
 
@@ -155,7 +108,7 @@ export default function Home() {
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#56616a]">
             Skip the DIY stress. For a flat labor fee of $350, Veloce Direct
             will give your room a fresh new look while you relax. From prep to
-            the final coat, we take care of the hard work so you don't have to.
+            the final coat, we take care of the hard work so you don&apos;t have to.
           </p>
         </div>
 
@@ -167,15 +120,13 @@ export default function Home() {
             <div className="mt-4 flex items-start flex-col justify-between gap-4 border-b border-[#eadfce] pb-6 md:flex-row">
               <div>
                 <p className="text-lg font-black leading-none text-[#17212b]">
-                  We provide the expert labor for a flat $350; you just provide
+                  We provide the labor, you just provide
                   the paint!
                 </p>
-                {/* <p className="mt-2 text-sm font-bold uppercase tracking-[0.12em] text-[#56616a]">
-                  Labor only
-                </p> */}
+              
               </div>
               <p className="md:max-w-42 md:text-right text-sm font-semibold leading-5 text-[#56616a]">
-                Standard rooms up to 14x14 with 8ft ceiling.*
+                Standard rooms up to 14x14 walls only.*
               </p>
             </div>
           </div>
@@ -216,9 +167,9 @@ export default function Home() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <article className="rounded-3xl border border-white/12 bg-white/8 p-6">
-              <h3 className="text-2xl font-extrabold">Fresh Frame add-on</h3>
+              <h3 className="text-2xl font-extrabold">Fresh add-ons</h3>
               <p className="mt-4 leading-7 text-white/78">
-                Refresh your baseboards, window frames, and doors to match your
+                Refresh your ceilings, baseboards, window frames, and doors to match your
                 new walls for a perfectly polished finish.
               </p>
             </article>

@@ -1,18 +1,30 @@
 import { Mail, Phone } from "lucide-react";
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import WorkCard from "@/components/WorkCard";
 
 const phoneDisplay = "(516) 250-6544";
 const phoneHref = "tel:+15162506544";
 const emailHref = "mailto:Dgiammalva1@outlook.com";
 
-const workImages = [
+const workProjects = [
   {
-    src: "/room-painting-hero.jpg",
-    alt: "Freshly painted Long Island room with protected floors",
+    id: "fresh-interior-room-refresh",
     title: "Fresh Interior Room Refresh",
     location: "Long Island, NY",
+    images: [
+      {
+        src: "/logo.png",
+        alt: "Freshly painted Long Island room with protected floors",
+      },
+      {
+        src: "/room-painting-hero.jpg",
+        alt: "Finished Long Island interior painting project",
+      },
+      {
+        src: "/room-painting-hero.jpg",
+        alt: "Clean room refresh after professional wall painting",
+      },
+    ],
   },
 ];
 
@@ -25,32 +37,7 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <main className="min-h-screen bg-[#f7f2e8] text-[#1f2428]">
-      <section className="px-6 py-6 sm:px-8 lg:px-10">
-        <header className="mx-auto flex max-w-7xl items-center justify-between gap-4">
-          <Link
-            className="text-base font-black tracking-[0.14em] text-[#17212b]"
-            href="/"
-          >
-            Veloce Direct
-          </Link>
-          <nav className="flex items-center gap-2">
-            <Link
-              className="rounded-full border border-[#dfd5c5] bg-white px-4 py-3 text-sm font-bold text-[#17212b] shadow-sm transition hover:bg-[#fffaf1]"
-              href="/"
-            >
-              Home
-            </Link>
-            <a
-              className="rounded-full bg-[#2d6a4f] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-[#2d6a4f]/20 transition hover:bg-[#24563f]"
-              href={phoneHref}
-            >
-              Call
-            </a>
-          </nav>
-        </header>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 pb-10 pt-8 sm:px-8 lg:px-10 lg:pb-14 lg:pt-12">
+      <section className="mx-auto max-w-7xl px-6 pb-10 pt-44 sm:px-8 sm:pt-48 lg:pb-14 lg:pt-44">
         <div className="max-w-3xl">
           <p className="text-sm font-black uppercase tracking-[0.18em] text-[#bd4f2d]">
             Our work
@@ -60,39 +47,23 @@ export default function WorkPage() {
           </h1>
           <p className="mt-5 text-lg leading-8 text-[#56616a]">
             A look at completed room refreshes, interior wall painting, and home
-            decor paint updates by Dino Giammalva at Veloce Direct.
+            decor paint updates by Veloce Direct.
           </p>
           <p className="mt-6 inline-flex rounded-full border border-[#dfd5c5] bg-white px-4 py-2 text-sm font-bold text-[#2d6a4f] shadow-sm">
-            {workImages.length} project shown
+            {workProjects.length} project shown
           </p>
         </div>
       </section>
 
       <section className="px-6 pb-16 sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
-          {workImages.map((item) => (
-            <article
-              className="overflow-hidden rounded-3xl border border-[#eadfce] bg-white shadow-[0_14px_36px_rgba(31,36,40,0.10)]"
-              key={item.src}
-            >
-              <div className="relative aspect-[16/11]">
-                <Image
-                  alt={item.alt}
-                  className="object-cover"
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  src={item.src}
-                />
-              </div>
-              <div className="flex items-start justify-between gap-4 p-5 sm:p-6">
-                <h2 className="text-xl font-black leading-tight text-[#17212b]">
-                  {item.title}
-                </h2>
-                <p className="shrink-0 rounded-full bg-[#f7f2e8] px-3 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#2d6a4f]">
-                  {item.location}
-                </p>
-              </div>
-            </article>
+          {workProjects.map((project) => (
+            <WorkCard
+              images={project.images}
+              key={project.id}
+              location={project.location}
+              title={project.title}
+            />
           ))}
         </div>
       </section>
@@ -120,7 +91,7 @@ export default function WorkPage() {
               href={emailHref}
             >
               <Mail aria-hidden="true" className="h-5 w-5" strokeWidth={2.4} />
-              Email Dino
+              Email Us
             </a>
           </div>
         </div>
