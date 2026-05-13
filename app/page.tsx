@@ -120,7 +120,7 @@ export default function Home() {
             <div className="mt-4 flex items-start flex-col justify-between gap-4 border-b border-[#eadfce] pb-6 md:flex-row">
               <div>
                 <p className="text-lg font-black leading-none text-[#17212b]">
-                  We provide the labor, you just provide
+                  We provide the labor for a flat $350, you just provide
                   the paint!
                 </p>
               
